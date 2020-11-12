@@ -8,6 +8,9 @@ public class SliderBar : MonoBehaviour
     private static float valueSinhronize;
     private void OnEnable()
     {
+        if (valueSinhronize == 0)
+            valueSinhronize = 1;
+        
         Time.timeScale = valueSinhronize;
         slider.value = valueSinhronize;
     }
